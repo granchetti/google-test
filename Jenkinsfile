@@ -13,21 +13,12 @@ pipeline {
             }
         }
 
-        stage('delete test cases image') {
-            steps {
-                sh 'docker rmi $(docker images -q mytest)'
-            }
-        }
-
-        stage('Allure Report') {
-            steps {
-                sh 'npx allure generate allure-results --clean'
-            }
-        }
     }
 
     post {
         always {
+            sh 'docker rmi $(docker images -q mytest)'
+            sh 'npx allure generate allure-results --clean'
             allure([
                 includeProperties: false, 
                 jdk: '', 
