@@ -1,6 +1,6 @@
 # Google test
 
----
+
 ### Table of contents
 
 - [Google test](#google-test)
@@ -14,7 +14,6 @@
     - [Run test cases](#run-test-cases)
     - [Docker execution](#docker-execution)
   - [References](#references)
----
 
 
 ## Description
