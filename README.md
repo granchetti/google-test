@@ -14,12 +14,13 @@
     - [Docker execution](#docker-execution)
   - [References](#references)
 
----
+
 ## Description
 
 Acceptance testing following the screenplay pattern with Cucumber and Playwright. The base of framework is built with JavaScript programming language and Gherkin.
 
-### Organization
+
+## Organization
 
 | Path | Description |
 | :--- | :---: |
@@ -37,7 +38,6 @@ Acceptance testing following the screenplay pattern with Cucumber and Playwright
 
 You’ll need Node.js installed. Install at least v16.10.0 or higher as this is the oldest active LTS version.
 
---- 
 
 ## How to use 
 
@@ -77,6 +77,8 @@ we have to build the docker image and then we can create the containers with the
    docker build . -t test
 2. ```
    docker run -it -e DEVICE="Galaxy S8" --name Galaxy_S8 test npm test
+   
+   
 ## References
 
 [Playwright](https://playwright.dev/)
