@@ -18,7 +18,7 @@
 
 ## Description
 
-Acceptance testing following the screenplay pattern with Cucumber and WebdriverIO. The base of framework is built with JavaScript programming language and Gherkin.
+Acceptance testing following the Screenplay Pattern with Cucumber and WebdriverIO. The base of framework is built with JavaScript programming language and Gherkin.
 
 
 ## Organization
@@ -59,12 +59,8 @@ To install the framework, you must follow the following steps:
     
 ### Run test cases 
 
-To run the test case we need choose the device and export it as environment variables like:
+To run the test case , you must follow the following step:
 
-``` 
-    export DEVICE="Desktop Chrome" or "iPhone 12" or "Galaxy S8" and so on
-```
-Now we are ready to run the tests, to do so, just run:
 ```
 npm run test
 ```
