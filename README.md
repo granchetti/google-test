@@ -13,8 +13,7 @@
     - [Run test cases](#run-test-cases)
     - [Docker execution](#docker-execution)
   - [References](#references)
-
-
+---
 
 ## Description
 
