@@ -45,7 +45,7 @@ We need Node.js installed to execute the test. In particular, I used v19.8.1.
 
 ### Diagram
          
-![image](https://drive.google.com/uc?export=view&id=1vmdSq9QnPjPlLsi_L-o4nEXVRz6KW4BS)
+![image](https://drive.google.com/uc?export=view&id=1_iQV28qtIA___yy2scgtBaynSqaVS07I/view)
 
 
 ### Instalation
