@@ -17,8 +17,8 @@ pipeline {
 
     post {
         always {
-            sh 'docker rmi $(docker images -q mytest)'
             sh 'npx allure generate allure-results --clean'
+            archiveArtifacts artifacts: 'allure-results/*.json', fingerprint: true
             allure([
                 includeProperties: false, 
                 jdk: '', 
@@ -26,7 +26,6 @@ pipeline {
                 reportBuildPolicy: 'ALWAYS', 
                 results: [[path: 'allure-results']]
             ])
-            archiveArtifacts artifacts: 'allure-results/*.json', fingerprint: true
         }
     }
 }
