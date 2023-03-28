@@ -18,26 +18,26 @@
 
 ## Description
 
-Acceptance testing following the screenplay pattern with Cucumber and Playwright. The base of framework is built with JavaScript programming language and Gherkin.
+Acceptance testing following the screenplay pattern with Cucumber and WebdriverIO. The base of framework is built with JavaScript programming language and Gherkin.
 
 
 ## Organization
 
 | Path | Description |
 | :--- | :---: |
-| data | It is where we will put all the data that we will need to execute the test cases, such as the selectos |
-| facts| It is where we will put all the classes that we will need to initialize the execute of the test cases, we can say that it is associated with Given step|
-|features | Features is the place where we will keep all our user stories written in Gherkins |
-|interactions | It is where we will put all the classes related with the interactions with the SUT, such as navigating to websites, clicking buttons, entering values in form fields, or submitting HTTP requests to a REST API. This series of actions are composite a results in a facts, task or questions|
-| questions | It is where we will put all the classes to check that the task was successful, we can say that it is associated with the Then step. Questions will consist of a series of interactions|
-|selectos | It is where we will put all the selectors that we will need to localize some element like button, menu, etc|
-|steps-definitions | The step definitions is where we will put all our steps that are written in the Features section |
-| task | It is where we will put all the classes related with the business goal, I mean, with the action that i will do in the execute of the test case, we can say that it is associated with When step. Tasks will consist of a series of interactions|
+| data | It is where we put all the data that we need to execute the test cases, such as headers, selectos, etc. |
+| facts | It is where we put all the classes that we need to initialize the execution of the test cases; we can say that it is associated with the "Given step". |
+| features | Features is the place where we put all user stories written in Gherkins. |
+| interactions | It is where we put all the classes related to the interactions with the SUT, such as clicking button or entering values in form fields. |
+| models | It is where we will put all the POJOs or web pages, such as Google Home, Google Search, etc. |
+| questions | It is where we put all the classes to check if the task was successful; we can say that it is associated with the "Then step". |
+| steps-definitions | It is where we put all our steps that are written in the "features" section. |
+| tasks | It is where we will put all the classes related to the business goal, the action that we do during the execution of the test case; we can say that it is associated with the "When step". |
 
 
 ## Prerequisites
 
-You’ll need Node.js installed. Install at least v16.10.0 or higher as this is the oldest active LTS version.
+We need Node.js installed to execute the test. In particular, I used v19.8.1.
 
 
 ## How to use 
@@ -49,6 +49,7 @@ You’ll need Node.js installed. Install at least v16.10.0 or higher as this is 
 
 
 ### Instalation
+
 To install the framework, you must follow the following steps:   
 
 1. ``` 
@@ -58,16 +59,14 @@ To install the framework, you must follow the following steps:
     
 ### Run test cases 
 
-Now, time to run your tests!, but after all with need choose the device, for to do that we need to export as environment variables like:
+To run the test case we need choose the device and export it as environment variables like:
 
 ``` 
     export DEVICE="Desktop Chrome" or "iPhone 12" or "Galaxy S8" and so on
 ```
-more info about of [devices](https://playwright.dev/docs/emulation)
-
 Now we are ready to run the tests, to do so, just run:
 ```
-npm test
+npm run test
 ```
 
 ### Docker execution
@@ -82,4 +81,4 @@ we have to build the docker image and then we can create the containers with the
    
 ## References
 
-[Playwright](https://playwright.dev/)
+[WebdriverIO](https://webdriver.io/)
