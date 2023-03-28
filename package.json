@@ -1,0 +1,20 @@
+{
+  "name": "google-test",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/allure-reporter": "^8.6.8",
+    "@wdio/cli": "^8.6.8",
+    "@wdio/cucumber-framework": "^8.6.8",
+    "@wdio/local-runner": "^8.6.8",
+    "@wdio/spec-reporter": "^8.6.8",
+    "chromedriver": "^111.0.0",
+    "wdio-chromedriver-service": "^8.1.1"
+  },
+  "scripts": {
+    "test": "wdio run ./wdio.conf.js"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.21.0",
+    "chai": "^4.3.7"
+  }
+}

@@ -1,0 +1,8 @@
+{
+
+    "cookiesButton_XPATH": "//button[@id='L2AGLb']//div[@class='QS5gu sy4vM']",
+    "searchInput_XPATH": "//input[@name='q']",
+    "searchResults_XPATH": "//div[@id='result-stats']"
+
+}
+  

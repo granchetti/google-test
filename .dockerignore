@@ -1,0 +1,4 @@
+node_modules
+test.ts
+allure-report
+allure-results

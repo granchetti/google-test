@@ -13,12 +13,14 @@
     - [Instalation](#instalation)
     - [Run test cases](#run-test-cases)
     - [Docker execution](#docker-execution)
+    - [Report execution](#report-execution)
+    - [Jenkins](#jenkins)
   - [References](#references)
 
 
 ## Description
 
-Acceptance testing following the Screenplay Pattern with Cucumber and WebdriverIO. The base of framework is built with JavaScript programming language and Gherkin.
+Acceptance testing following the Screenplay Pattern with Cucumber and WebdriverIO. The base of the framework has been built with JavaScript programming language and Gherkin.
 
 
 ## Organization
@@ -26,13 +28,13 @@ Acceptance testing following the Screenplay Pattern with Cucumber and WebdriverI
 | Path | Description |
 | :--- | :---: |
 | data | It is where we put all the data that we need to execute the test cases, such as headers, selectos, etc. |
-| facts | It is where we put all the classes that we need to initialize the execution of the test cases; we can say that it is associated with the "Given step". |
-| features | Features is the place where we put all user stories written in Gherkins. |
-| interactions | It is where we put all the classes related to the interactions with the SUT, such as clicking button or entering values in form fields. |
-| models | It is where we will put all the POJOs or web pages, such as Google Home, Google Search, etc. |
-| questions | It is where we put all the classes to check if the task was successful; we can say that it is associated with the "Then step". |
+| facts | It is where we put all the classes that we need to initialize the execution of the test cases; we can say that it is related to the "Given step". |
+| features | It is where we put all user stories written in Gherkins. |
+| interactions | It is where we put all the classes related to the interactions with the SUT, such as  the clicking button or the input of values in form fields. |
+| models | It is where we put all the POJOs or web pages. |
+| questions | It is where we put all the classes to check if the task has been successful; we can say that it related to the "Then step". |
 | steps-definitions | It is where we put all our steps that are written in the "features" section. |
-| tasks | It is where we will put all the classes related to the business goal, the action that we do during the execution of the test case; we can say that it is associated with the "When step". |
+| tasks | It is where we will put all the classes related to the business goal, the action that we do during the execution of the test case; we can say that it is related to the "When step". |
 
 
 ## Prerequisites
@@ -50,7 +52,7 @@ We need Node.js installed to execute the test. In particular, I used v19.8.1.
 
 ### Instalation
 
-To install the framework, you must follow the following steps:   
+To install the framework, we must follow these steps:   
 
 1. ``` 
     git clone https://github.com/granchetti/google-test.git
@@ -59,7 +61,7 @@ To install the framework, you must follow the following steps:
     
 ### Run test cases 
 
-To run the test case , you must follow the following step:
+To run the test case, we must follow these steps:
 
 ```
 npm run test
@@ -67,14 +69,27 @@ npm run test
 
 ### Docker execution
 
-we have to build the docker image and then we can create the containers with the different devices passed as a parameter when building the container, example:
+We have to build a docker image in order to create the containers, for example:
 
 1. ``` 
-   docker build . -t test
+   docker build -t mytest -f dockerfile .
 2. ```
-   docker run -it -e DEVICE="Galaxy S8" --name Galaxy_S8 test npm test
-   
-   
+   docker run -it mytest 
+
+### Report execution
+
+To create the report, we must follow these steps:
+
+1. ``` 
+   npx allure generate allure-results --clean
+2. ```
+   npx allure serve allure-results
+
+### Jenkins
+
+We have a Jenkinsfile with the configuration of a job in Jenkins. Before executing it, we need to install the Allure report plugin to see a prettier report.
+
+
 ## References
 
 [WebdriverIO](https://webdriver.io/)
