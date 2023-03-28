@@ -26,6 +26,7 @@ pipeline {
                 reportBuildPolicy: 'ALWAYS', 
                 results: [[path: 'allure-results']]
             ])
+            archiveArtifacts artifacts: 'allure-results/*.json', fingerprint: true
         }
     }
 }
