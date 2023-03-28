@@ -15,6 +15,7 @@
   - [References](#references)
 
 
+
 ## Description
 
 Acceptance testing following the screenplay pattern with Cucumber and Playwright. The base of framework is built with JavaScript programming language and Gherkin.
