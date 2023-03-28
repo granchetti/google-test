@@ -19,12 +19,6 @@ pipeline {
             }
         }
 
-        stage('Clean workspace') {
-            steps {
-                sh "ls -1 | grep -v cucumber-report.json | xargs rm -rf"
-            }
-        }
-
         stage('Allure Report') {
             steps {
                 sh 'npx allure generate allure-results --clean'
