@@ -17,11 +17,11 @@ RUN CHROMEDRIVER_VERSION=`curl -sS https://chromedriver.storage.googleapis.com/L
     curl -sS -o /tmp/chromedriver_linux64.zip https://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip && \
     unzip /tmp/chromedriver_linux64.zip chromedriver -d /usr/local/bin/ && \
     rm /tmp/chromedriver_linux64.zip
-    
-RUN apt-get update && apt-get install -y openssl
+
 
 WORKDIR /app
 ADD . /app
 RUN npm install
+RUN npm install allure-commandline
 
 CMD npm run test

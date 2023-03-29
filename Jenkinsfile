@@ -17,8 +17,7 @@ pipeline {
 
     post {
         always {
-            sh 'export LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH'
-            sh 'npx allure generate allure-results --clean'
+            sh 'allure generate allure-results --clean'
             archiveArtifacts artifacts: 'allure-results/*.json', fingerprint: true
             allure([
                 includeProperties: false, 
