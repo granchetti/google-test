@@ -18,7 +18,7 @@ pipeline {
     post {
         always {
             sh 'ls -la'
-            sh 'npm allure generate allure-results --clean'
+            sh 'npx allure generate allure-results --clean'
             archiveArtifacts artifacts: 'allure-results/*.json', fingerprint: true
             allure([
                 includeProperties: false, 
