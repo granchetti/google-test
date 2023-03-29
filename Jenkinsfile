@@ -14,19 +14,4 @@ pipeline {
         }
 
     }
-
-    post {
-        always {
-            sh 'ls -la'
-            sh 'npx allure generate allure-results --clean'
-            archiveArtifacts artifacts: 'allure-results/*.json', fingerprint: true
-            allure([
-                includeProperties: false, 
-                jdk: '', 
-                properties: [], 
-                reportBuildPolicy: 'ALWAYS', 
-                results: [[path: 'allure-results']]
-            ])
-        }
-    }
 }

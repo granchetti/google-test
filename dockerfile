@@ -22,6 +22,5 @@ RUN CHROMEDRIVER_VERSION=`curl -sS https://chromedriver.storage.googleapis.com/L
 WORKDIR /app
 ADD . /app
 RUN npm install
-RUN npm install allure-commandline
 
 CMD npm run test
