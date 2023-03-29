@@ -17,7 +17,6 @@ pipeline {
 
     post {
         always {
-            sh 'export DYLD_LIBRARY_PATH=/usr/local/opt/openssl@1.1/lib'
             sh 'npx allure generate allure-results --clean'
             archiveArtifacts artifacts: 'allure-results/*.json', fingerprint: true
             allure([
