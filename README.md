@@ -31,7 +31,7 @@ Acceptance testing following the Screenplay Pattern with Cucumber and WebdriverI
 | facts | It is where we put all the classes that we need to initialize the execution of the test cases; we can say that it is related to the "Given step". |
 | features | It is where we put all user stories written in Gherkins. |
 | interactions | It is where we put all the classes related to the interactions with the SUT, such as  the clicking button or the input of values in form fields. |
-| models | It is where we put all the POJOs or web pages. |
+| models | It is where we put a page or user interface component; in other words, it encapsulates the elements and actions that can be performed. |
 | questions | It is where we put all the classes to check if the task has been successful; we can say that it related to the "Then step". |
 | steps-definitions | It is where we put all our steps that are written in the "features" section. |
 | tasks | It is where we will put all the classes related to the business goal, the action that we do during the execution of the test case; we can say that it is related to the "When step". |
