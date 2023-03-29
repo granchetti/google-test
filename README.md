@@ -87,7 +87,7 @@ To create the report, we must follow these steps:
 
 ### Jenkins
 
-We have a Jenkinsfile with the configuration of a job in Jenkins. Before executing it, we need to install the Allure report plugin to see a prettier report.
+We have a Jenkinsfile with the configuration of a job in Jenkins.
 
 
 ## References
